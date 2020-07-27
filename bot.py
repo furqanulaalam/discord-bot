@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands, tasks
-from csv import DictReader, DictWriter, writer
+from csv import DictReader, DictWriter
 from shutil import copyfile
 
 bot = commands.Bot(command_prefix = '.')
