@@ -13,7 +13,7 @@ async def on_ready():
 #function for the bio command.
 @bot.command()
 async def bio(ctx):
-    await ctx.send("Hello IUSTIANS! My name is NotiBot(pun intended). I was born on the 26th of July, 2020. I was created by Furkan Nul Aalam. In fact, it wouldn't be wrong to call him my father. My purpose in life is to get you the latest updates from the university website. I can also get you upto 25 notifications(chronologically) from the university website on demand. I will keep functioning until there aren't any drastic changes in the university website. I will look for updates on the university website every 8 hours and if there are any, I will post them in the appropriate channel. Type '.nhelp' for help. I hope I can be of help to you all. Lastly, I hate people who think WhatsApp is better than Discord. \nThanks!")
+    await ctx.send("Hello IUSTIANS! My name is NotiBot(pun intended). I was born on the 26th of July, 2020. I was created by Furkan Nul Aalam. In fact, it wouldn't be wrong to call him my father. My purpose in life is to get you the latest updates from the university website. I can also get you upto 25 notifications(chronologically) from the university website on demand. I will keep functioning until there aren't any drastic changes in the university website. I will look for updates on the university website once every 8 hours and if there are any, I will post them in the appropriate channel. Type '.nhelp' for help. I hope I can be of help to you all. Lastly, I hate people who think WhatsApp is better than Discord. \nThanks!")
 
 #function for the help command.
 @bot.command()
