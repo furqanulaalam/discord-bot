@@ -55,7 +55,7 @@ async def notify(ctx, *, n):
 #checks the university website for updates every eight hours
 @tasks.loop(hours=8)
 async def task():
-    channel = bot.get_channel(ENTER_THE_ID_CHANNEL_ID_HERE)
+    channel = bot.get_channel(ENTER_THE_CHANNEL_ID_HERE)
     exec(open("scrape.py").read())
     
     stat = False
