@@ -78,5 +78,5 @@ async def task():
                         return 0
 
 
-bot.run('TOKEN HERE')    
+bot.run('TOKEN')    
 
