@@ -8,6 +8,8 @@ bot = commands.Bot(command_prefix = '.')
 @bot.event
 async def on_ready():
     exec(open("scrape.py").read())
+    with open('old.csv','w') as old:
+        pass
     copyfile('notifications.csv','old.csv')
     print("Bot is ready.")
     task.start()
@@ -53,7 +55,7 @@ async def notify(ctx, *, n):
 #checks the university website for updates every eight hours
 @tasks.loop(hours=8)
 async def task():
-    channel = bot.get_channel(CHANNEL_ID)
+    channel = bot.get_channel(ENTER_THE_ID_CHANNEL_ID_HERE)
     exec(open("scrape.py").read())
     
     stat = False
@@ -78,5 +80,5 @@ async def task():
                         return 0
 
 
-bot.run('TOKEN')    
+bot.run('ENTER THE TOKEN HERE') 
 
