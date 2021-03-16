@@ -7,8 +7,12 @@ bot = commands.Bot(command_prefix = '.')
 
 @bot.event
 async def on_ready():
-    print("Bot is ready.")
+    exec(open("scrape.py").read())
+    with open('old.csv','w') as old:
+        pass
+    copyfile('notifications.csv','old.csv')
     task.start()
+    print("Bot is ready.")
 
 #function for the bio command.
 @bot.command()
@@ -51,14 +55,14 @@ async def notify(ctx, *, n):
 #checks the university website for updates every eight hours
 @tasks.loop(hours=8)
 async def task():
-    channel = bot.get_channel(ID_HERE)
+    channel = bot.get_channel(ENTER_THE_CHANNEL_ID_HERE)
     exec(open("scrape.py").read())
     
     stat = False
     with open('notifications.csv','r') as ne:
         new = DictReader(ne)
         
-        with open('old.csv','r+') as ol:
+        with open('old.csv','r') as ol:
             old = DictReader(ol)
             
             for rowO in old:
@@ -76,4 +80,4 @@ async def task():
                         return 0
 
 
-bot.run('TOKEN_HERE')    
+bot.run('ENTER THE TOKEN HERE') 

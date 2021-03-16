@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 
-source = requests.get("https://www.iustlive.com/Index/Default.aspx").text
-base_url = "https://www.iustlive.com"
+source = requests.get("https://iust.ac.in/Index/Default.aspx").text
+base_url = "https://iust.ac.in"
 
 soup = BeautifulSoup(source, 'lxml')
 
